@@ -1,0 +1,50 @@
+{
+  "template": {
+    "input_pdf": "templates/jam.pdf",
+    "output_name_format": "{certificate_id}_{name}.pdf"
+  },
+
+  "fields": {
+    "name": {
+      "source_column": "name",
+      "x": 500,
+      "y": 330,
+      "font": "Times-Bold",
+      "font_size": 26,
+      "align": "center",
+      "auto_shrink": true
+    },
+    "certificate_id": {
+      "source_column": "certificate_id",
+      "x": 490,
+      "y": 720,
+      "font": "Times-Bold",
+      "font_size": 16,
+      "align": "left"
+    }
+  },
+  "email": {
+    "sender": {
+      "address": "gdscprmitr@gmail.com",
+      "display_name": "GDG On Campus PRMIT&R"
+    },
+    "subject": "Your Certificate of Participation",
+    "body": "Hello {name},\n\nThank you for attending our event.\n\nCertificate ID: {certificate_id}\n\nPlease find your certificate attached.\n\nRegards,\nTeam"
+  },
+
+  "testing": {
+    "enabled": true,
+    "receivers": [
+      {
+        "email": "vedantmali05@gmail.com",
+        "name": "James John Doe",
+        "certificate_id": "CCP2500001"
+      },
+      {
+        "email": "vedantwebdev@gmail.com",
+        "name": "Alice John Doe",
+        "certificate_id": "CCP2500002"
+      }
+    ]
+  }
+}
