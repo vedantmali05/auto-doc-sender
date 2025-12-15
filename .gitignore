@@ -205,3 +205,12 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+output/*
+templates/*
+# Ignore everything in data folder
+data/*
+
+# But keep test.xlsx
+!data/test.xlsx
