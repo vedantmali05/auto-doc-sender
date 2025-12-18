@@ -1,13 +1,21 @@
 {
+  "mode": "production",
+  "dry_run": false,
+
+  "data": {
+    "testing": "data/test.xlsx",
+    "production": "data/participants.xlsx"
+  },
+
   "template": {
     "input_pdf": "templates/jam.pdf",
-    "output_name_format": "{certificate_id}_{name}.pdf"
+    "output_pdf_name": "{certificate_id}_{name}.pdf"
   },
 
   "fields": {
     "name": {
       "source_column": "name",
-      "x": 500,
+      "x": 512,
       "y": 330,
       "font": "Times-Bold",
       "font_size": 26,
@@ -16,35 +24,22 @@
     },
     "certificate_id": {
       "source_column": "certificate_id",
-      "x": 490,
+      "x": 485,
       "y": 720,
       "font": "Times-Bold",
       "font_size": 16,
       "align": "left"
     }
   },
-  "email": {
-    "sender": {
-      "address": "gdscprmitr@gmail.com",
-      "display_name": "GDG On Campus PRMIT&R"
-    },
-    "subject": "Your Certificate of Participation",
-    "body": "Hello {name},\n\nThank you for attending our event.\n\nCertificate ID: {certificate_id}\n\nPlease find your certificate attached.\n\nRegards,\nTeam"
-  },
 
-  "testing": {
-    "enabled": true,
-    "receivers": [
-      {
-        "email": "vedantmali05@gmail.com",
-        "name": "James John Doe",
-        "certificate_id": "CCP2500001"
-      },
-      {
-        "email": "vedantwebdev@gmail.com",
-        "name": "Alice John Doe",
-        "certificate_id": "CCP2500002"
-      }
-    ]
+  "email": {
+    "receiver_email_column": "email",
+    "sender": {
+      "address": "vedantmali05@gmail.com",
+      "display_name": "Vedant Mali"
+    },
+    "subject": "Certificate of Completion 🎓 – Google Cloud Study Jams 2025",
+    "body_text": "Dear {name} 🎉,\n\nCongratulations on successfully completing the Google Cloud Study Jams 2025, organized by GDG On Campus, PRMIT&R.\n\nCompleting the Study Jams requires consistent effort, hands-on practice, and dedication to learning through labs and skill badges. We truly appreciate the time and commitment you invested throughout the program.\n\nPlease find your Certificate of Completion attached with this email.\n\nCertificate ID: {certificate_id}\n\nYour certificate will be verifiable through the official verification portal from January 2026. Until then, you may share it on professional or social platforms.\n\nRegards,\nVedant Mali\nOrganizer\nGDG On Campus, PRMIT&R",
+    "body_html": "<p>Dear <b>{name}</b> 🎉,</p><p>Congratulations on successfully completing the <b>Google Cloud Study Jams 2025</b>, organized by <b>GDG On Campus, PRMIT&R</b>.</p><p>Completing the Study Jams requires consistent effort, hands-on practice, and dedication to learning through labs and skill badges. We truly appreciate the time and commitment you invested throughout the program.</p><p>Please find your <b>Certificate of Completion</b> attached with this email 📜.</p><p><b>Certificate ID:</b> {certificate_id}</p><p>Your certificate will be verifiable through the official verification portal from <b>January 2026</b>. Until then, you may share it on professional or social platforms ✨.</p><p>For any certificate-related queries, feel free to reach out.</p><p>Regards,<br><b>Vedant Mali</b><br>Organizer<br>GDG On Campus, PRMIT&R</p>"
   }
 }

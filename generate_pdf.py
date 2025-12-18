@@ -15,13 +15,15 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 with open(CONFIG_PATH, "r") as f:
     config = json.load(f)
 
+mode = config["mode"]  # testing / production
 template_cfg = config["template"]
 fields_cfg = config["fields"]
-testing_cfg = config.get("testing", {"enabled": False})
 
-DATA_PATH = "data/test.xlsx" if testing_cfg.get("enabled") else "data/participants.xlsx"
+# ---------------- DATA PATH (MODE BASED) ----------------
+DATA_PATH = config["data"][mode]
 
 template_pdf = template_cfg["input_pdf"]
+
 if not os.path.exists(template_pdf):
     raise FileNotFoundError("Template PDF not found")
 
@@ -59,7 +61,11 @@ def create_pdf(row, output_path):
             font_size = max(font_size - (len(text) - 22), font_size - 6)
 
         if align == "center":
-            text_width = fitz.get_text_length(text, fontname=font_name, fontsize=font_size)
+            text_width = fitz.get_text_length(
+                text,
+                fontname=font_name,
+                fontsize=font_size
+            )
             x = x - text_width / 2
 
         page.insert_text(
@@ -76,7 +82,7 @@ def create_pdf(row, output_path):
 
 # ---------------- MAIN ----------------
 for row in rows:
-    filename = template_cfg["output_name_format"].format(**row).replace(" ", "_")
+    filename = template_cfg["output_pdf_name"].format(**row).replace(" ", "_")
     output_path = os.path.join(OUTPUT_DIR, filename)
 
     create_pdf(row, output_path)
