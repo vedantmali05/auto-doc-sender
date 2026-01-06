@@ -8,15 +8,15 @@
   },
 
   "template": {
-    "input_pdf": "templates/jam.pdf",
+    "input_pdf": "templates/workshop.pdf",
     "output_pdf_name": "{certificate_id}_{name}.pdf"
   },
 
   "fields": {
     "name": {
       "source_column": "name",
-      "x": 512,
-      "y": 330,
+      "x": 320,
+      "y": 195,
       "font": "Times-Bold",
       "font_size": 26,
       "align": "center",
@@ -24,10 +24,10 @@
     },
     "certificate_id": {
       "source_column": "certificate_id",
-      "x": 485,
-      "y": 720,
+      "x": 270,
+      "y": 416,
       "font": "Times-Bold",
-      "font_size": 16,
+      "font_size": 9,
       "align": "left"
     }
   },
@@ -35,11 +35,11 @@
   "email": {
     "receiver_email_column": "email",
     "sender": {
-      "address": "vedantmali05@gmail.com",
-      "display_name": "Vedant Mali"
+      "address": "gdscprmitr@gmail.com",
+      "display_name": "GDG On Campus"
     },
-    "subject": "Certificate of Completion 🎓 – Google Cloud Study Jams 2025",
-    "body_text": "Dear {name} 🎉,\n\nCongratulations on successfully completing the Google Cloud Study Jams 2025, organized by GDG On Campus, PRMIT&R.\n\nCompleting the Study Jams requires consistent effort, hands-on practice, and dedication to learning through labs and skill badges. We truly appreciate the time and commitment you invested throughout the program.\n\nPlease find your Certificate of Completion attached with this email.\n\nCertificate ID: {certificate_id}\n\nYour certificate will be verifiable through the official verification portal from January 2026. Until then, you may share it on professional or social platforms.\n\nRegards,\nVedant Mali\nOrganizer\nGDG On Campus, PRMIT&R",
-    "body_html": "<p>Dear <b>{name}</b> 🎉,</p><p>Congratulations on successfully completing the <b>Google Cloud Study Jams 2025</b>, organized by <b>GDG On Campus, PRMIT&R</b>.</p><p>Completing the Study Jams requires consistent effort, hands-on practice, and dedication to learning through labs and skill badges. We truly appreciate the time and commitment you invested throughout the program.</p><p>Please find your <b>Certificate of Completion</b> attached with this email 📜.</p><p><b>Certificate ID:</b> {certificate_id}</p><p>Your certificate will be verifiable through the official verification portal from <b>January 2026</b>. Until then, you may share it on professional or social platforms ✨.</p><p>For any certificate-related queries, feel free to reach out.</p><p>Regards,<br><b>Vedant Mali</b><br>Organizer<br>GDG On Campus, PRMIT&R</p>"
+    "subject": "Certificate of Participation - ML Accelerator: TechSprint Hackathon Prep Workshop",
+    "body_text": "Dear {name} 🎉,\n\nCongratulations on successfully participating in the ML Accelerator: TechSprint Hackathon Prep workshop, organized by GDG On Campus, PRMIT&R.\n\nThis workshop focused on strengthening your Machine Learning fundamentals and preparing you for hackathons like TechSprint. We truly appreciate the effort, curiosity, and active participation you showed throughout the workshop.\n\nPlease find your Certificate of Participation attached with this email.\n\nCertificate ID: {certificate_id}\n\nYour certificate will be verifiable through the official verification portal from late January 2026. Until then, you may share it on professional or social platforms.\n\nRegards,\nVedant Mali\nOrganizer\nGDG On Campus, PRMIT&R",
+    "body_html": "<p>Dear <b>{name}</b> 🎉,</p><p>Congratulations on successfully participating in the <b>ML Accelerator: TechSprint Hackathon Prep</b> workshop, organized by <b>GDG On Campus, PRMIT&R</b>.</p><p>This workshop focused on strengthening your Machine Learning fundamentals and preparing you for hackathons like <b>TechSprint</b>. We truly appreciate the effort, curiosity, and active participation you showed throughout the workshop.</p><p>Please find your <b>Certificate of Participation</b> attached with this email 📜.</p><p><b>Certificate ID:</b> {certificate_id}</p><p>Your certificate will be verifiable through the official verification portal from <b>late January 2026</b>. Until then, you may share it on professional or social platforms ✨.</p><p>If you have any certificate-related queries, feel free to reach out.</p><p>Regards,<br><b>Vedant Mali</b><br>Organizer<br>GDG On Campus, PRMIT&R</p>"
   }
 }
