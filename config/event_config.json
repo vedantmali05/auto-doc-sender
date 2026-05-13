@@ -1,33 +1,33 @@
 {
   "mode": "production",
-  "dry_run": false,
+  "dry_run": true,
 
   "data": {
     "testing": "data/test.xlsx",
-    "production": "data/participants.xlsx"
+    "production": "data/droidverse-p.xlsx"
   },
 
   "template": {
-    "input_pdf": "templates/workshop.pdf",
-    "output_pdf_name": "{certificate_id}_{name}.pdf"
+    "input_pdf": "templates/droidverse-p.pdf",
+    "output_pdf_name": "{verify_id}_{name}.pdf"
   },
 
   "fields": {
     "name": {
       "source_column": "name",
-      "x": 320,
-      "y": 195,
+      "x": 209,
+      "y": 176,
       "font": "Times-Bold",
-      "font_size": 26,
+      "font_size": 16,
       "align": "center",
       "auto_shrink": true
     },
-    "certificate_id": {
-      "source_column": "certificate_id",
-      "x": 270,
-      "y": 416,
+    "verify_id": {
+      "source_column": "verify_id",
+      "x": 376,
+      "y": 218,
       "font": "Times-Bold",
-      "font_size": 9,
+      "font_size": 6,
       "align": "left"
     }
   },
@@ -38,8 +38,8 @@
       "address": "gdscprmitr@gmail.com",
       "display_name": "GDG On Campus"
     },
-    "subject": "Certificate of Participation - ML Accelerator: TechSprint Hackathon Prep Workshop",
-    "body_text": "Dear {name} 🎉,\n\nCongratulations on successfully participating in the ML Accelerator: TechSprint Hackathon Prep workshop, organized by GDG On Campus, PRMIT&R.\n\nThis workshop focused on strengthening your Machine Learning fundamentals and preparing you for hackathons like TechSprint. We truly appreciate the effort, curiosity, and active participation you showed throughout the workshop.\n\nPlease find your Certificate of Participation attached with this email.\n\nCertificate ID: {certificate_id}\n\nYour certificate will be verifiable through the official verification portal from late January 2026. Until then, you may share it on professional or social platforms.\n\nRegards,\nVedant Mali\nOrganizer\nGDG On Campus, PRMIT&R",
-    "body_html": "<p>Dear <b>{name}</b> 🎉,</p><p>Congratulations on successfully participating in the <b>ML Accelerator: TechSprint Hackathon Prep</b> workshop, organized by <b>GDG On Campus, PRMIT&R</b>.</p><p>This workshop focused on strengthening your Machine Learning fundamentals and preparing you for hackathons like <b>TechSprint</b>. We truly appreciate the effort, curiosity, and active participation you showed throughout the workshop.</p><p>Please find your <b>Certificate of Participation</b> attached with this email 📜.</p><p><b>Certificate ID:</b> {certificate_id}</p><p>Your certificate will be verifiable through the official verification portal from <b>late January 2026</b>. Until then, you may share it on professional or social platforms ✨.</p><p>If you have any certificate-related queries, feel free to reach out.</p><p>Regards,<br><b>Vedant Mali</b><br>Organizer<br>GDG On Campus, PRMIT&R</p>"
+    "subject": "Certificate of Participation - DroidVerse: Android Development Workshop",
+    "body_text": "Dear {name},\n\nThanks for participating in the event DroidVerse: Android Development Workshop.\n\nPlease find the Participation Certificate and Certificate ID attached below.\n\nCertificate ID: {verify_id}.\n\nYou can verify your certificate by visiting https://verify.prmitr.in. Just enter the Certificate ID given in this email. You may also find the same Certificate ID printed on your certificate.\n\nIf your verification takes longer than expected, try: Clearing browser cache and cookies, try changing the device, or try on your friends devices.\n\nFeel free to share your achievement on social media.\n\nRegards,\nTeam GDG On Campus,\nPRMIT&R",
+    "body_html": "<p>Dear <b>{name}</b>,</p><p>Thanks for participating in the event <b>DroidVerse: Android Development Workshop</b>.</p><p>Please find the Participation Certificate and Certificate ID attached below.</p><p><b>Certificate ID:</b> {verify_id}.</p><p>You can verify your certificate by visiting <a href=\"https://verify.prmitr.in\">https://verify.prmitr.in</a>. Just enter the Certificate ID given in this email. You may also find the same Certificate ID printed on your certificate.</p><p>If your verification takes longer than expected, try: Clearing browser cache and cookies, try changing the device, or try on your friends devices.</p><p>Feel free to share your achievement on social media.</p><p>Regards,<br><b>Team GDG On Campus,</b><br>PRMIT&R</p>"
   }
 }

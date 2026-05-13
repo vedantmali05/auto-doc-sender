@@ -214,3 +214,9 @@ data/*
 
 # But keep test.xlsx
 !data/test.xlsx
+
+# Root temporary files and user data
+/*.xlsx
+/*.pdf
+email.txt
+
